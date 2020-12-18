@@ -6,13 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ClickbuttonsPage  {
-    WebDriver driver;
-    WebElement webclickbutton;
-    WebElement conguralationstitle;
-    WebElement maintitle;
-    WebElement jsclickbutton;
-    WebElement closebutton;
-    WebElement clsbutton;
+    protected WebDriver driver;
+    protected WebElement webclickbutton;
+    protected WebElement conguralationstitle;
+    protected WebElement maintitle;
+    protected WebElement jsclickbutton;
+    protected WebElement closebutton;
+    protected WebElement clsbutton;
     public void webelementdefinition(){
         maintitle=driver.findElement(By.xpath("//div[@id='main-header']"));
         webclickbutton=driver.findElement(By.xpath("//span[@id='button1']"));

@@ -3,18 +3,11 @@ package org.cb.ta;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends Driver {
-    private WebDriver driver;
+    final WebDriver driver;
 
     public HomePage() {
-        /*System.setProperty("webdriver.chrome.driver","webdriver\\chromedriver.exe");
-        driver=new ChromeDriver();
-        driver.get("https://webdriveruniversity.com/index.html");*/
-
-        // driver=new Driver();
         driver = Driver.getdriver();
         String homepageurl = "https://webdriveruniversity.com/index.html";
         driver.get(homepageurl);
@@ -31,5 +24,4 @@ public class HomePage extends Driver {
         buttonlink.click();
         System.out.println("buttonlink  clicked");
     }
-
 }
