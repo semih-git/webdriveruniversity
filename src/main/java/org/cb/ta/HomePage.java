@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage extends Driver {
     final WebDriver driver;
+    WebElement buttonlink;
 
     public HomePage() {
         driver = Driver.getdriver();
@@ -17,6 +18,10 @@ public class HomePage extends Driver {
         WebElement nav_title = driver.findElement(By.xpath("//a[@id='nav-title']"));
         nav_title.isDisplayed();
         System.out.println("title displayed");
+    }
+    public boolean islinkanabled(){
+        buttonlink=driver.findElement(By.xpath("//a[@id='button-clicks']"));
+        return buttonlink.isEnabled();
     }
 
     public void clickbuttonlink() {

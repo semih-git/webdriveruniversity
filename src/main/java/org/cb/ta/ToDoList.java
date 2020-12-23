@@ -22,7 +22,7 @@ public class ToDoList {
         System.out.println(toDoListElement.getText());
         toDoListElement.isDisplayed();
         toDoListElement.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         toDoListElement.click();
     }
     public void addNewToDo() throws InterruptedException {
@@ -31,10 +31,27 @@ public class ToDoList {
         toDoListElement.sendKeys("ABC");
         Thread.sleep(1000);
         toDoListElement.clear();
-        toDoListElement.sendKeys("DEF");
+        toDoListElement.sendKeys("do Something");
         Thread.sleep(1000);
         //toDoListElement.sendKeys(Keys.RETURN); // RETURN yada ENTER ikiside olabilir.
         toDoListElement.sendKeys(Keys.ENTER);
 
+    }
+    public void deleteToDo()  {
+        toDoListElement=driver.findElement(By.xpath("//li[contains(text(),'Buy new robes')]"));
+        toDoListElement.click();
+    }
+
+    public boolean isTaskDisplayed(String taskName){
+        return driver.findElement(By.xpath("//ul/li[contains(text(), '"+ taskName +"')]")).isDisplayed();
+    }
+
+    public boolean deleteOneTask(String taskName) {
+        if (isTaskDisplayed(taskName)){
+            WebElement trashButton = driver.findElement(By.xpath("//*/ul/li[contains(text(), '"+taskName+"')]/span/i"));
+            trashButton.click();
+            return true;
+        }
+        return false;
     }
 }

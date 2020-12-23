@@ -2,6 +2,8 @@ package org.cb.ta;
 
 import org.testng.annotations.Test;
 
+import static org.testng.AssertJUnit.assertTrue;
+
 public class ToDoListTest {
     ToDoList toDoList = new ToDoList();
 
@@ -13,5 +15,12 @@ public class ToDoListTest {
     public void addNewToDoTest() throws InterruptedException {
         toDoList.addNewToDo();
     }
-
+    @Test
+    public void deleteToDo() {
+        toDoList.deleteToDo();
+    }
+    @Test(dependsOnMethods = {"addNewToDoTest"})
+    public void testDeleteOneTask() {
+        assertTrue(toDoList.deleteOneTask("do Something"));
+    }
 }
