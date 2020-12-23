@@ -13,4 +13,9 @@ public class HomePageTest {
     public void clickbutonlink(){
         homePage.clickbuttonlink();
     }
+    @Test
+    public void clickToDoList(){
+        homePage.clickToDoListLink();
+    }
+
 }

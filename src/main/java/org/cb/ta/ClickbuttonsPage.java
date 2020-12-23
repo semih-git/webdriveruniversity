@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ClickbuttonsPage  {
+public class ClickbuttonsPage {
     protected WebDriver driver;
     protected WebElement webclickbutton;
     protected WebElement conguralationstitle;
@@ -14,12 +14,12 @@ public class ClickbuttonsPage  {
     protected WebElement closebutton;
     protected WebElement clsbutton;
     public void webelementdefinition(){
-        maintitle=driver.findElement(By.xpath("//div[@id='main-header']"));
-        webclickbutton=driver.findElement(By.xpath("//span[@id='button1']"));
-        conguralationstitle=driver.findElement(By.xpath("//h4[@class='modal-title']"));
-        jsclickbutton=driver.findElement(By.xpath("//span[@id='button2']"));
-        closebutton=driver.findElement(By.xpath("//button[@class='close']"));
-        clsbutton=driver.findElement(By.xpath("//button[@class='btn btn-default']"));
+        maintitle = driver.findElement(By.xpath("//div[@id='main-header']"));
+        webclickbutton = driver.findElement(By.xpath("//span[@id='button1']"));
+        conguralationstitle = driver.findElement(By.xpath("//h4[@class='modal-title']"));
+        jsclickbutton = driver.findElement(By.xpath("//span[@id='button2']"));
+        closebutton = driver.findElement(By.xpath("//button[@class='close']"));
+        clsbutton = driver.findElement(By.xpath("//button[@class='btn btn-default']"));
     }
     public ClickbuttonsPage() {
         driver=Driver.getdriver();

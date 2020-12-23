@@ -24,4 +24,11 @@ public class HomePage extends Driver {
         buttonlink.click();
         System.out.println("buttonlink  clicked");
     }
+
+    public boolean clickToDoListLink(){
+        WebElement buttonLink = driver.findElement(By.xpath("//a[@id=\"to-do-list\"]"));
+        buttonLink.click();
+        return buttonLink.isDisplayed();
+    }
+
 }
