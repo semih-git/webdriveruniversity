@@ -3,17 +3,18 @@ package org.cb.ta;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 public class ClickbuttonsPage {
-    protected WebDriver driver;
-    protected WebElement webclickbutton;
-    protected WebElement conguralationstitle;
-    protected WebElement maintitle;
-    protected WebElement jsclickbutton;
-    protected WebElement closebutton;
-    protected WebElement clsbutton;
-    public void webelementdefinition(){
+
+    WebDriver driver;
+    WebElement webclickbutton;
+    WebElement conguralationstitle;
+    WebElement maintitle;
+    WebElement jsclickbutton;
+    WebElement closebutton;
+    WebElement clsbutton;
+
+    public void WebElementDefinition(){
         maintitle = driver.findElement(By.xpath("//div[@id='main-header']"));
         webclickbutton = driver.findElement(By.xpath("//span[@id='button1']"));
         conguralationstitle = driver.findElement(By.xpath("//h4[@class='modal-title']"));
@@ -26,32 +27,32 @@ public class ClickbuttonsPage {
         driver.get("http://www.webdriveruniversity.com/Click-Buttons/index.html");
     }
     public void maintitlecontrol(){
-        webelementdefinition();
+        WebElementDefinition();
         maintitle.isDisplayed();
         System.out.println(maintitle.getText());
     }
     public void webelememntclickbuttoncontroll(){
-        webelementdefinition();
+        WebElementDefinition();
         webclickbutton.isDisplayed();
         System.out.println("web element click button seemed");
     }
     public void javascriptclickbuttoncontroll(){
-        webelementdefinition();
+        WebElementDefinition();
         jsclickbutton.isDisplayed();
         System.out.println("js click button seemed");
     }
     public void wbbuttonclick(){
-        webelementdefinition();
+        WebElementDefinition();
         webclickbutton.click();
         conguralationstitle.isDisplayed();
     }
     public void clickclosewbpopup() throws InterruptedException {
-        webelementdefinition();
+        WebElementDefinition();
         Thread.sleep(2000);
         closebutton.click();
     }
     public void jsbuttonclick(){
-        webelementdefinition();
+        WebElementDefinition();
         jsclickbutton.click();
     }
 }

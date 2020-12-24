@@ -4,18 +4,20 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HomePageTest {
+
     HomePage homePage = new HomePage();
+
     @Test
-    public void navtitleiddisplayed(){
-        homePage.controltitle();
+    public void nav_titleIdDisplayed(){
+        homePage.controlTitle();
     }
     @Test
-    public void enablitycontrolforbuttonlink(){
-        Assert.assertEquals(true, homePage.islinkanabled());
+    public void EnabledControlForButtonLink(){
+        Assert.assertEquals(true, homePage.isLinkEnabled());
     }
     @Test
-    public void clickbutonlink(){
-        homePage.clickbuttonlink();
+    public void clickButtonlink(){
+        homePage.clickButtonlink();
     }
     @Test
     public void clickToDoList(){

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class HomePage extends Driver {
-    final WebDriver driver;
+    WebDriver driver;
     WebElement buttonlink;
 
     public HomePage() {
@@ -14,18 +14,18 @@ public class HomePage extends Driver {
         driver.get(homepageurl);
     }
 
-    public void controltitle() {
+    public void controlTitle() {
         WebElement nav_title = driver.findElement(By.xpath("//a[@id='nav-title']"));
         nav_title.isDisplayed();
         System.out.println("title displayed");
     }
-    public boolean islinkanabled(){
+    public boolean isLinkEnabled(){
         buttonlink=driver.findElement(By.xpath("//a[@id='button-clicks']"));
         return buttonlink.isEnabled();
     }
 
-    public void clickbuttonlink() {
-        WebElement buttonlink = driver.findElement(By.xpath("//a[@id='button-clicks']"));
+    public void clickButtonlink() {
+        buttonlink = driver.findElement(By.xpath("//a[@id='button-clicks']"));
         buttonlink.click();
         System.out.println("buttonlink  clicked");
     }
@@ -35,5 +35,4 @@ public class HomePage extends Driver {
         buttonLink.click();
         return buttonLink.isDisplayed();
     }
-
 }
