@@ -8,26 +8,30 @@ class ClickbuttonPageTest {
 
     @Test
     public void maintitletest(){
-        clickbuttonsPage.maintitlecontrol();
+        clickbuttonsPage.mainTitleControl();
     }
     @Test
     public void webelementclickbuttoncontrol(){
-        clickbuttonsPage.webelememntclickbuttoncontroll();
+        clickbuttonsPage.webElememntClickButtonControl();
     }
     @Test
     public void jsclickbuttoncontrol(){
-        clickbuttonsPage.javascriptclickbuttoncontroll();
+        clickbuttonsPage.javaScriptClickButtonControl();
     }
     @Test
     public void clickwbbutton(){
-        clickbuttonsPage.wbbuttonclick();
+        clickbuttonsPage.webButtonClick();
     }
     @Test
     public void closewbpopup() throws InterruptedException {
-        clickbuttonsPage.clickclosewbpopup();
+        clickbuttonsPage.clickCloseWebPopUp();
     }
     @Test
     public void jsbuttonclick(){
-        clickbuttonsPage.jsbuttonclick();
+        clickbuttonsPage.jsButtonClick();
     }
+//    @Test
+//    public void clickCloseJSPopUp() throws InterruptedException {
+//        clickbuttonsPage.clickCloseJSPopUp();
+//    }
 }

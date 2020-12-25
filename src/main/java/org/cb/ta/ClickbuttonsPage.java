@@ -20,39 +20,44 @@ public class ClickbuttonsPage {
         conguralationstitle = driver.findElement(By.xpath("//h4[@class='modal-title']"));
         jsclickbutton = driver.findElement(By.xpath("//span[@id='button2']"));
         closebutton = driver.findElement(By.xpath("//button[@class='close']"));
-        clsbutton = driver.findElement(By.xpath("//button[@class='btn btn-default']"));
+        clsbutton = driver.findElement(By.xpath("//div[@id='myModalJSClick']/div/div/div/button"));
     }
     public ClickbuttonsPage() {
         driver=Driver.getdriver();
         driver.get("http://www.webdriveruniversity.com/Click-Buttons/index.html");
     }
-    public void maintitlecontrol(){
+    public void mainTitleControl(){
         WebElementDefinition();
         maintitle.isDisplayed();
         System.out.println(maintitle.getText());
     }
-    public void webelememntclickbuttoncontroll(){
+    public void webElememntClickButtonControl(){
         WebElementDefinition();
         webclickbutton.isDisplayed();
         System.out.println("web element click button seemed");
     }
-    public void javascriptclickbuttoncontroll(){
+    public void javaScriptClickButtonControl(){
         WebElementDefinition();
         jsclickbutton.isDisplayed();
         System.out.println("js click button seemed");
     }
-    public void wbbuttonclick(){
+    public void webButtonClick(){
         WebElementDefinition();
         webclickbutton.click();
         conguralationstitle.isDisplayed();
     }
-    public void clickclosewbpopup() throws InterruptedException {
+    public void clickCloseWebPopUp() throws InterruptedException {
         WebElementDefinition();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         closebutton.click();
     }
-    public void jsbuttonclick(){
+    public void jsButtonClick(){
         WebElementDefinition();
         jsclickbutton.click();
     }
+//    public void clickCloseJSPopUp() throws InterruptedException {
+//        WebElementDefinition();
+//        Thread.sleep(1000);
+//        clsbutton.click();
+//    }
 }
