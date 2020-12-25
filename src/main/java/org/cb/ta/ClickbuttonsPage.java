@@ -13,6 +13,7 @@ public class ClickbuttonsPage {
     WebElement jsclickbutton;
     WebElement closebutton;
     WebElement clsbutton;
+    WebElement actionMoveClickButon;
 
     public void WebElementDefinition(){
         maintitle = driver.findElement(By.xpath("//div[@id='main-header']"));
@@ -20,7 +21,8 @@ public class ClickbuttonsPage {
         conguralationstitle = driver.findElement(By.xpath("//h4[@class='modal-title']"));
         jsclickbutton = driver.findElement(By.xpath("//span[@id='button2']"));
         closebutton = driver.findElement(By.xpath("//button[@class='close']"));
-        clsbutton = driver.findElement(By.xpath("//div[@id='myModalJSClick']/div/div/div/button"));
+        clsbutton = driver.findElement(By.xpath("//*[@id='myModalJSClick']/div/div/div[3]/button"));
+        actionMoveClickButon = driver.findElement(By.xpath("//span[@id='button3']"));
     }
     public ClickbuttonsPage() {
         driver=Driver.getdriver();
@@ -48,16 +50,21 @@ public class ClickbuttonsPage {
     }
     public void clickCloseWebPopUp() throws InterruptedException {
         WebElementDefinition();
-        Thread.sleep(1000);
+
         closebutton.click();
+        Thread.sleep(1000);
     }
-    public void jsButtonClick(){
+    public void jsButtonClick() throws InterruptedException {
         WebElementDefinition();
         jsclickbutton.click();
+        Thread.sleep(1000);
     }
-//    public void clickCloseJSPopUp() throws InterruptedException {
-//        WebElementDefinition();
-//        Thread.sleep(1000);
-//        clsbutton.click();
-//    }
+    public void jsButtonPopupClose(){
+        WebElementDefinition();
+        clsbutton.click();
+    }
+    public void actionMoveClickButon() {
+        WebElementDefinition();
+        actionMoveClickButon.click();
+    }
 }

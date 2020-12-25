@@ -22,16 +22,20 @@ class ClickbuttonPageTest {
     public void clickwbbutton(){
         clickbuttonsPage.webButtonClick();
     }
-    @Test
+    @Test(priority = 1)
     public void closewbpopup() throws InterruptedException {
         clickbuttonsPage.clickCloseWebPopUp();
     }
-    @Test
-    public void jsbuttonclick(){
+    @Test(priority = 2)
+    public void jsbuttonclick() throws InterruptedException {
         clickbuttonsPage.jsButtonClick();
     }
-//    @Test
-//    public void clickCloseJSPopUp() throws InterruptedException {
-//        clickbuttonsPage.clickCloseJSPopUp();
-//    }
+    @Test(priority = 3)
+    public void testJsButtonPopupClose() {
+        clickbuttonsPage.jsButtonPopupClose();
+    }
+    @Test(priority = 4)
+    public void actionMoveClickButonTest() {
+        clickbuttonsPage.actionMoveClickButon();
+    }
 }
