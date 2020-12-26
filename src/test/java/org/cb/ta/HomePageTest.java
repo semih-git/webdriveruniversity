@@ -23,5 +23,9 @@ public class HomePageTest {
     public void clickToDoList(){
         homePage.clickToDoListLink();
     }
+    @Test
+    public void testAccordionPage(){
+        homePage.accordionPage();
+    }
 
 }

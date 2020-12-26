@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 public class HomePage extends Driver{
     WebDriver driver;
     WebElement buttonlink;
+    WebElement accordionPageLink;
+
 
     public HomePage() {
         driver = Driver.getdriver();
@@ -34,5 +36,13 @@ public class HomePage extends Driver{
         WebElement buttonLink = driver.findElement(By.xpath("//a[@id=\"to-do-list\"]"));
         buttonLink.click();
         return buttonLink.isDisplayed();
+    }
+    public boolean accordionPage(){
+        accordionPageLink = driver.findElement(By.xpath("//a[@href='Accordion/index.html']"));
+        if(accordionPageLink.isDisplayed()){
+            accordionPageLink.click();
+            return true;
+        }
+        return false;
     }
 }
