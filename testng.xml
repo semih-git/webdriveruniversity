@@ -8,7 +8,7 @@
 <!--            <class name="org.cb.ta.ClickbuttonPageTest"/>-->
 
 <!--            <class name="org.cb.ta.ToDoListTest"/>-->
-            <class name="org.cb.ta.AccordionPage"/>
+            <class name="org.cb.ta.AccordionPageTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

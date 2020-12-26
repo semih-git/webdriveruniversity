@@ -25,7 +25,7 @@ public class HomePageTest {
     }
     @Test
     public void testAccordionPage(){
-        homePage.accordionPage();
+        Assert.assertTrue(homePage.accordionPage(),"Accordion page is not displayed or something went wrong.");
     }
 
 }

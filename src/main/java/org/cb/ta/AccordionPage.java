@@ -22,4 +22,14 @@ public class AccordionPage {
     public boolean headerIsDisplayed(){
         return pageHeader.isDisplayed();
     }
+    public boolean manualTestingButtonIsClickable() throws InterruptedException {
+        if(manualTestingButton.isDisplayed()){
+            manualTestingButton.click();
+            Thread.sleep(1000);
+            manualTestingButton.click();
+            return true;
+        }
+        return false;
+    }
+
 }
