@@ -5,10 +5,11 @@
         <classes>
             <class name="org.cb.ta.HomePageTest"/>
 
-<!--            <class name="org.cb.ta.ClickbuttonPageTest"/>-->
+            <class name="org.cb.ta.ClickbuttonPageTest"/>
 
-<!--            <class name="org.cb.ta.ToDoListTest"/>-->
+            <class name="org.cb.ta.ToDoListTest"/>
             <class name="org.cb.ta.AccordionPageTest"/>
+            <class name="org.cb.ta.DropDownPageTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
