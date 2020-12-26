@@ -16,5 +16,12 @@ public class AccordionPageTest {
     public void testManualTestingButtonIsClickable() throws InterruptedException {
         Assert.assertTrue(accordionPage.manualTestingButtonIsClickable());
     }
-
+    @Test
+    public void testManualTestingTextIsDisplayed(){
+        assertTrue((accordionPage.manualTestingTextIsDisplayed()));
+    }
+    @Test
+    public void testManualTestingTextIsClosed(){
+        assertFalse(accordionPage.manualTestingTextIsClosed());
+    }
 }

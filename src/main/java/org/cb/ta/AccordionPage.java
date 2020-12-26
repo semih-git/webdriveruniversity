@@ -31,5 +31,11 @@ public class AccordionPage {
         }
         return false;
     }
+    public boolean manualTestingTextIsDisplayed(){
+        return manualTestingText.isDisplayed();
+    }
+    public boolean manualTestingTextIsClosed(){
+        return manualTestingText.getAttribute("Style").equals("max-height: 90px;");
 
+    }
 }
