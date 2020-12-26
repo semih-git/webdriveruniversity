@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HomePage extends Driver{
+public class HomePage {
     WebDriver driver;
     WebElement buttonlink;
     WebElement accordionPageLink;
